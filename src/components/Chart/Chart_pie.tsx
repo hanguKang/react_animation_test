@@ -2,7 +2,7 @@
 import {  useEffect } from 'react';
 import './Chart_pie.css';
 
-function Chart_pie(props:{getData:boolean}){
+function Chart_pie(props:{getData:{value:number, color:string}}){
 
 
     useEffect(()=>{
@@ -23,7 +23,7 @@ function Chart_pie(props:{getData:boolean}){
                 element.style.background = `conic-gradient(${colorname} 0% ${i}%, #ffffff ${i}% 100%)`;
             }
         }
-        draw(80,'.pie-chart', '#ccc');
+        draw(props.getData.value,'.pie-chart', props.getData.color);
     },[props.getData]);
    
     return(
