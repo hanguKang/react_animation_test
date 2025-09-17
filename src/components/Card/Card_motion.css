@@ -1,0 +1,31 @@
+.motionDiv{
+    margin-top:600px;
+    border:1px solid red;
+}
+
+@property --tw-gradient-from {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #ff0000;
+}
+
+@keyframes gradientShift {
+  from {
+    --tw-gradient-from: #ff0000;
+  }
+  to {
+    --tw-gradient-from: #0000ff;
+  }
+}
+
+
+.tailwindcssGrident{
+    width:200px; height:50px; border:1px solid green;
+    animation: gradientShift 3s infinite alternate;
+    background: linear-gradient(to right, var(--tw-gradient-from) 100px, #ffffff 200px) repeat-Y;
+}
+.tailwindcssGrident_ver2{
+    width:200px; height:50px; border:1px solid green;
+    background: linear-gradient(to right, var(--tw-gradient-from) 100px, #ffffff 200px) repeat-Y;
+    transition: --tw-gradient-from .5s ease;
+}

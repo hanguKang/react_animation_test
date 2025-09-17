@@ -1,7 +1,41 @@
 {
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "types": ["node", "react"],
+    "jsxImportSource": "@emotion/react",
+    //"types": ["@emotion/react/types/css-prop"],
+
+    
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      // "@/components/*": ["src/components/*"],
+      // "@/types/*": ["src/types/*"],
+      // "@/styles/*": ["src/styles/*"]
+    }
+  },
+  "include": ["src"],
   "files": [],
   "references": [
-    { "path": "./tsconfig.app.json" },
+    
     { "path": "./tsconfig.node.json" }
   ]
 }

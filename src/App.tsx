@@ -1,10 +1,10 @@
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import Layout from '../components/layouts/Layout'
-import { Parent } from './memo'
-import { ShowRef } from './use_Ref'
-import './App.css'
+import Layout from './components/layouts/Layout'
+import { Parent } from './components/memo'
+import { ShowRef } from './components/use_Ref'
+import './styles/App.css'
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -32,7 +32,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p> */}
       <Layout>
-        <h1 className="text-lg"> Hello React</h1>
+        <h1 className="text-lg font-NotoSans"> Hello React</h1>
         <Parent/>
         <ShowRef/>
       </Layout>

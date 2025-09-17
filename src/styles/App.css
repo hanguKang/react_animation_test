@@ -40,30 +40,22 @@
 .read-the-docs {
   color: #888;
 } */
-@import 'tailwindcss'; /* prefix 기능을 사용하고 싶다면, @import 'tailwindcss' prefix(tw);  <div className="tw:text-gray-900" */
+/*@import 'tailwindcss';  prefix 기능을 사용하고 싶다면, @import 'tailwindcss' prefix(tw);  <div className="tw:text-gray-900" */
+@import "tailwindcss"prefix(tw);
+/* @import 'tailwindcss-animate'; */
 @import "../styles/fonts.css";
+@config'../tailwind.config.ts';
 
 @plugin "daisyui";
 
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
 
 @layer theme, base, components, utilities;
-@layer utilites{
-  .mx-6{
-    margin-inline: calc(var(--spacing) *6 )
-  }
-  .bg-blue-500\/50{
-    background-color: color-mix(in oklab, var(--color-blue-500) 50%, transparent);
+@layer theme {
+  :root {
+    --spacing: 0.25rem; /* 기본 간격 스케일 */
   }
 }
-@property --tw-gradient-from{
-  syntax: "<color>";
-  inherits:false;
-  initail-value: #000;
-}
-@layer base {
+@base {
   body {
     font-family: var(--font-notoSansKr), sans-serif;
     font-weight:100;
@@ -75,6 +67,15 @@
     font-weight: 600;
   }
 }
+@layer utilites{
+  .mx-6{
+    margin-inline: calc(var(--spacing) *6 )
+  }
+  .bg-blue-500\/50{
+    background-color: color-mix(in oklab, var(--color-blue-500) 50%, transparent);
+  }
+}
+
 
 /*tailwindcss에서 기본적으로 제공하는 
     plugin 
@@ -113,9 +114,9 @@
 
 
 :root {
-  --font-notoSansKr:'Noto Sans KR';
-  --spacint:10px; 
-  --color-blue-500:rgba(0,0,125,1);
+  --font-notoSansKr: 'Noto Sans KR', sans-serif;
+  --spacing: 0.25rem;
+  --color-blue-500: #3b82f6;
   font-family:var(--font-notoSansKr), system-ui, Avenir,  Helvetica, Arial, sans-serif; 
   line-height:1.5;
   font-weight:400;
@@ -125,6 +126,7 @@
   background-color: #242424;
 
 }
+
 
 .btn{
   @apply rounded-full;

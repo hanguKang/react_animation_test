@@ -23,7 +23,7 @@ import React from 'react';
   };
 
   const handleButtonClick = () => {
-    setIsClicked(true);
+    setIsClicked(!isClicked);
     // 클릭 시 pressedScaleValue를 변경하는 등 로직 추가
     setPressedScaleValue(0.4); 
     // hoverScaleValue도 필요에 따라 변경 가능

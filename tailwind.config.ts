@@ -2,6 +2,7 @@ import type { Config } from 'tailwindcss';
 import tailwindcssAnimate from 'tailwindcss-animate';
 
 const config: Config = {
+    prefix:'tw-', //자동으로 tailwindcss의 접두사로 tw-md:flex tw-lg:block 이렇게 자동으로 붙음. prefix는 다른 CSS 라이브러리와 클래스 이름 충돌을 피하고 싶을 때 유용
     content: [                                                              // which files to search for tailwind classes
         './app/**/*.{js,ts,jsx,tsx}',                                       /* → Find tailwind classes used as class ='' in files defined here and convert them to CSS */
         './components/**/*.{js,ts,jsx,tsx}',                                 
@@ -62,7 +63,8 @@ const config: Config = {
     },
     plugins: [                                                              // external tailwind plugins
         tailwindcssAnimate, //require("tailwindcss-animate")는 require와 module.export는 Node.js의 전통적인 모듈 시스템인 Commonjs파일 형식이고 import와 export default는 ESM문법(ECMAScript문법)                                    // tailwindcss-animated: animation plugin
-    ]
+    ],
+    
 };
 
 export default config;
