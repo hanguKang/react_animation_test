@@ -22,7 +22,9 @@ export default tseslint.config(
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
-      ]
+      ],
+      'no-unused-vars': 'warn', // 노란색으로 표시
+      'no-console': 'error',    // 빨간색으로 표시
     },
   },
 )
