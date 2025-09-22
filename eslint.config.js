@@ -23,8 +23,9 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
-      'no-unused-vars': 'warn', // 노란색으로 표시
-      'no-console': 'error',    // 빨간색으로 표시
+      'no-unused-vars': 'off', // 노란색으로 표시
+      '@typescript-eslint/no-unused-vars': 'warn', // TypeScript 전용 규칙 사용
+      'no-console': 'off',    // 빨간색으로 표시
     },
   },
 )

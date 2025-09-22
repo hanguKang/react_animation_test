@@ -5,7 +5,7 @@ interface DraggableListItemProps {
   text: string;
   index: number;
   onMove: (fromIndex: number, toIndex: number) => void;
-  items: unknown[];
+  items: React.ReactNode[];
 }
 
 function DraggableListItem ({ text, index, onMove, items }:DraggableListItemProps){
