@@ -109,11 +109,12 @@ function ChatBox() {
           padding: "10px",
         }}
       >
-        {messages.map((msg) => (
+        
+        { messages.map((msg) => (
           <div
             // id = {String(msg.id)}
             key={msg.id}
-            style={{ clear:'both', border:'1px solid red', margin: "5px 0", padding: "5px", background: "#f0f0f0" }}
+            style={{ float:msg.isMine?'right':'left', clear:'both', border:'1px solid red', margin: "5px 0", padding: "5px", background: "#f0f0f0" }}
           >
             {msg.text}
           </div>

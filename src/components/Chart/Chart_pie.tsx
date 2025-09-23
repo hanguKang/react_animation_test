@@ -7,8 +7,8 @@ function Chart_pie(props:{getData:{value:number, color:string}}){
 
     useEffect(()=>{
         const draw = (max:number, selector:string, colorname:string)=>{
-            var i=1;
-            var func1 = setInterval(function(){
+            let i=1;
+            const func1 = setInterval(function(){
                 if(i<max){
                     coloring(i,selector,colorname);
                     i++;
